@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Trabajo_Practico_Estructura_de_Datos
 {
-    public partial class frmSistema : Form
+    public partial class frmDatosMios : Form
     {
-        public frmSistema()
+        public frmDatosMios()
         {
             InitializeComponent();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

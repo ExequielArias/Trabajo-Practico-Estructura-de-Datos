@@ -21,5 +21,11 @@ namespace Trabajo_Practico_Estructura_de_Datos
         {
 
         }
+
+        private void datosMiosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDatosMios Datos = new frmDatosMios();
+            Datos.ShowDialog();
+        }
     }
 }
