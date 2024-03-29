@@ -21,5 +21,12 @@ namespace Trabajo_Practico_Estructura_de_Datos
         {
 
         }
+
+        private void cmdVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmEstructuraDeDatos principal = new frmEstructuraDeDatos();
+            principal.ShowDialog(); 
+        }
     }
 }
