@@ -91,6 +91,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 AD.Write(aux.nombre);
                 AD.Write(";");
                 AD.Write(aux.tramite);
+                AD.Write(";");
                 aux = aux.siguiente;
             }
             AD.Close(); 

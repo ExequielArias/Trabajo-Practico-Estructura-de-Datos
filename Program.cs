@@ -16,7 +16,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCola());
+            Application.Run(new frmEstructuraDeDatos());
         }
     }
 }

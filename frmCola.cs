@@ -47,10 +47,17 @@ namespace Trabajo_Practico_Estructura_de_Datos
             }
             else
             {
-                lblCodigo.Text = "";
-                lblNombre.Text = "";
-                lblTramite.Text = ""; 
+                txtCodigoE.Text = "";
+                txtNombreE.Text = "";
+                txtTramiteE.Text = ""; 
             }
+        }
+
+        private void frmCola_Load(object sender, EventArgs e)
+        {
+            txtCodigoE.Enabled = false;
+            txtNombreE.Enabled = false;
+            txtTramiteE.Enabled = false;    
         }
     }
 }

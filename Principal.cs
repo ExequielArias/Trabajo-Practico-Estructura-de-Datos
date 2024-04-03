@@ -41,20 +41,24 @@ namespace Trabajo_Practico_Estructura_de_Datos
 
         private void estructurasLinealesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEstructurasLineales estructurasLineales = new frmEstructurasLineales();
-            estructurasLineales.ShowDialog();
+            
         }
 
         private void estructurasNoLinealesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEstructurasNoLineales estructurasNoLineales = new frmEstructurasNoLineales();
-            estructurasNoLineales.ShowDialog();
+            
         }
 
         private void baseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBaseDeDatos BD = new frmBaseDeDatos();
-            BD.ShowDialog();
+          
+        }
+
+        private void colaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmCola cola = new frmCola();
+            cola.ShowDialog();
         }
     }
 }
