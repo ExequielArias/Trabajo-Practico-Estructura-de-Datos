@@ -52,6 +52,8 @@
     <Compile Include="BaseDeDatos.Designer.cs">
       <DependentUpon>BaseDeDatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="clsCola.cs" />
+    <Compile Include="clsNodo.cs" />
     <Compile Include="EstructurasLineales.cs">
       <SubType>Form</SubType>
     </Compile>
