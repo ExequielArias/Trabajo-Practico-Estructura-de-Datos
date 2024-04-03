@@ -48,6 +48,9 @@
             this.gbListado = new System.Windows.Forms.GroupBox();
             this.lstCola = new System.Windows.Forms.ListBox();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbNuevoElemento.SuspendLayout();
             this.gbElementoEliminado.SuspendLayout();
@@ -231,10 +234,32 @@
             // dgvGrilla
             // 
             this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Nombre,
+            this.Tramite});
             this.dgvGrilla.Location = new System.Drawing.Point(215, 19);
             this.dgvGrilla.Name = "dgvGrilla";
             this.dgvGrilla.Size = new System.Drawing.Size(493, 199);
             this.dgvGrilla.TabIndex = 1;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 50;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 200;
+            // 
+            // Tramite
+            // 
+            this.Tramite.HeaderText = "Tramite";
+            this.Tramite.Name = "Tramite";
+            this.Tramite.Width = 200;
             // 
             // frmCola
             // 
@@ -280,5 +305,8 @@
         private System.Windows.Forms.GroupBox gbListado;
         private System.Windows.Forms.DataGridView dgvGrilla;
         private System.Windows.Forms.ListBox lstCola;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tramite;
     }
 }
