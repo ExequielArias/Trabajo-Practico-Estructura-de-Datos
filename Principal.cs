@@ -56,9 +56,26 @@ namespace Trabajo_Practico_Estructura_de_Datos
 
         private void colaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void colaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             this.Hide();
             frmCola cola = new frmCola();
             cola.ShowDialog();
+        }
+
+        private void pilaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmPila pila = new frmPila();
+            pila.ShowDialog();
         }
     }
 }
