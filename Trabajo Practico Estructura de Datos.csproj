@@ -66,6 +66,12 @@
     <Compile Include="EstructurasNoLineales.Designer.cs">
       <DependentUpon>EstructurasNoLineales.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCola.Designer.cs">
+      <DependentUpon>frmCola.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EstructurasNoLineales.resx">
       <DependentUpon>EstructurasNoLineales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCola.resx">
+      <DependentUpon>frmCola.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
