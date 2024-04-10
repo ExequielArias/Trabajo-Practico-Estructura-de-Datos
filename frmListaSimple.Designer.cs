@@ -36,6 +36,7 @@
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstListaSimple = new System.Windows.Forms.ListBox();
             this.gbElementoEliminado = new System.Windows.Forms.GroupBox();
+            this.cbCodigoEliminado = new System.Windows.Forms.ComboBox();
             this.cmdEliminar = new System.Windows.Forms.Button();
             this.lblCodigoEliminado = new System.Windows.Forms.Label();
             this.gbNuevoElemento = new System.Windows.Forms.GroupBox();
@@ -47,7 +48,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbCodigoEliminado = new System.Windows.Forms.ComboBox();
             this.gbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrillaListaSimple)).BeginInit();
             this.gbElementoEliminado.SuspendLayout();
@@ -116,6 +116,15 @@
             this.gbElementoEliminado.TabStop = false;
             this.gbElementoEliminado.Text = "Elemento Eliminado";
             // 
+            // cbCodigoEliminado
+            // 
+            this.cbCodigoEliminado.FormattingEnabled = true;
+            this.cbCodigoEliminado.Location = new System.Drawing.Point(73, 108);
+            this.cbCodigoEliminado.Name = "cbCodigoEliminado";
+            this.cbCodigoEliminado.Size = new System.Drawing.Size(121, 21);
+            this.cbCodigoEliminado.TabIndex = 11;
+            this.cbCodigoEliminado.SelectedIndexChanged += new System.EventHandler(this.cbCodigoEliminado_SelectedIndexChanged);
+            // 
             // cmdEliminar
             // 
             this.cmdEliminar.Location = new System.Drawing.Point(12, 161);
@@ -124,6 +133,7 @@
             this.cmdEliminar.TabIndex = 10;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // lblCodigoEliminado
             // 
@@ -179,6 +189,7 @@
             this.cmdAgregar.TabIndex = 3;
             this.cmdAgregar.Text = "Agregar";
             this.cmdAgregar.UseVisualStyleBackColor = true;
+            this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             // 
             // lblTramite
             // 
@@ -216,14 +227,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
-            // 
-            // cbCodigoEliminado
-            // 
-            this.cbCodigoEliminado.FormattingEnabled = true;
-            this.cbCodigoEliminado.Location = new System.Drawing.Point(73, 108);
-            this.cbCodigoEliminado.Name = "cbCodigoEliminado";
-            this.cbCodigoEliminado.Size = new System.Drawing.Size(121, 21);
-            this.cbCodigoEliminado.TabIndex = 11;
             // 
             // frmListaSimple
             // 

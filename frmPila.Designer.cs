@@ -279,6 +279,7 @@
             this.Name = "frmPila";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pila";
+            this.Load += new System.EventHandler(this.frmPila_Load);
             this.gbListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrillaPila)).EndInit();
             this.gbElementoEliminado.ResumeLayout(false);

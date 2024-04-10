@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Trabajo_Practico_Estructura_de_Datos
 {
@@ -15,6 +16,53 @@ namespace Trabajo_Practico_Estructura_de_Datos
         public frmListaSimple()
         {
             InitializeComponent();
+        }
+        clsListaSimple Lista = new clsListaSimple();
+
+        private void cmdEliminar_Click(object sender, EventArgs e)
+        {
+            if (Lista.Primero != null)
+            {
+                Int32 x = Convert.ToInt32(cbCodigoEliminado.Text);
+                Lista.Eliminar(x);
+                Lista.Recorrer(dgvGrillaListaSimple);
+                Lista.Recorrer(lstListaSimple);
+                Lista.Recorrer(cbCodigoEliminado);
+                Lista.Recorrer();
+            }
+            else
+            {
+                MessageBox.Show("La lista esta vacia", "Error", MessageBoxButtons.OK);
+            }
+            cmdEliminar.Enabled = false;
+        }
+
+        private void cmdAgregar_Click(object sender, EventArgs e)
+        { 
+            clsNodo objNodo = new clsNodo();
+            objNodo.codigo = Convert.ToInt32(txtCodigo.Text);
+            objNodo.nombre = txtNombre.Text;
+            objNodo.tramite = txtTramite.Text;
+            Lista.Agregar(objNodo);
+            Lista.Recorrer(dgvGrillaListaSimple);
+            Lista.Recorrer(lstListaSimple);
+            Lista.Recorrer(cbCodigoEliminado);
+            Lista.Recorrer();
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = ""; 
+        }
+
+        private void cbCodigoEliminado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbCodigoEliminado.Text == "")
+            {
+                cmdEliminar.Enabled = false;
+            }
+            else
+            {
+                cmdEliminar.Enabled = true;
+            }
         }
     }
 }

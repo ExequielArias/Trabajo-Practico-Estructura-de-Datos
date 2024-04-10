@@ -52,5 +52,10 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 txtTramiteE.Text = "";
             }
         }
+
+        private void frmPila_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

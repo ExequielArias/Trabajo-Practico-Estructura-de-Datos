@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaDoble));
             this.gbListado = new System.Windows.Forms.GroupBox();
             this.dgvGrillaListaSimple = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,11 +47,15 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gbListarDatos = new System.Windows.Forms.GroupBox();
+            this.optAscendente = new System.Windows.Forms.RadioButton();
+            this.optDescendente = new System.Windows.Forms.RadioButton();
             this.gbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrillaListaSimple)).BeginInit();
             this.gbElementoEliminado.SuspendLayout();
             this.gbNuevoElemento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbListarDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbListado
@@ -61,7 +64,7 @@
             this.gbListado.Controls.Add(this.lstListaSimple);
             this.gbListado.Location = new System.Drawing.Point(12, 239);
             this.gbListado.Name = "gbListado";
-            this.gbListado.Size = new System.Drawing.Size(735, 227);
+            this.gbListado.Size = new System.Drawing.Size(718, 227);
             this.gbListado.TabIndex = 15;
             this.gbListado.TabStop = false;
             this.gbListado.Text = "Listado en una Lista y en una Grilla";
@@ -111,10 +114,10 @@
             this.gbElementoEliminado.Controls.Add(this.lblCodigoEliminado);
             this.gbElementoEliminado.Location = new System.Drawing.Point(479, 12);
             this.gbElementoEliminado.Name = "gbElementoEliminado";
-            this.gbElementoEliminado.Size = new System.Drawing.Size(251, 221);
+            this.gbElementoEliminado.Size = new System.Drawing.Size(251, 117);
             this.gbElementoEliminado.TabIndex = 14;
             this.gbElementoEliminado.TabStop = false;
-            this.gbElementoEliminado.Text = "Elemento Eliminado";
+            this.gbElementoEliminado.Text = "Elemento a Eliminar";
             // 
             // cbCodigoEliminado
             // 
@@ -126,7 +129,7 @@
             // 
             // cmdEliminar
             // 
-            this.cmdEliminar.Location = new System.Drawing.Point(12, 161);
+            this.cmdEliminar.Location = new System.Drawing.Point(12, 55);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(233, 54);
             this.cmdEliminar.TabIndex = 10;
@@ -217,7 +220,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(204, 221);
@@ -225,11 +227,45 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // gbListarDatos
+            // 
+            this.gbListarDatos.Controls.Add(this.optDescendente);
+            this.gbListarDatos.Controls.Add(this.optAscendente);
+            this.gbListarDatos.Location = new System.Drawing.Point(480, 136);
+            this.gbListarDatos.Name = "gbListarDatos";
+            this.gbListarDatos.Size = new System.Drawing.Size(250, 97);
+            this.gbListarDatos.TabIndex = 16;
+            this.gbListarDatos.TabStop = false;
+            this.gbListarDatos.Text = "Listar Datos";
+            // 
+            // optAscendente
+            // 
+            this.optAscendente.AutoSize = true;
+            this.optAscendente.Location = new System.Drawing.Point(8, 32);
+            this.optAscendente.Name = "optAscendente";
+            this.optAscendente.Size = new System.Drawing.Size(82, 17);
+            this.optAscendente.TabIndex = 0;
+            this.optAscendente.TabStop = true;
+            this.optAscendente.Text = "Ascendente";
+            this.optAscendente.UseVisualStyleBackColor = true;
+            // 
+            // optDescendente
+            // 
+            this.optDescendente.AutoSize = true;
+            this.optDescendente.Location = new System.Drawing.Point(8, 56);
+            this.optDescendente.Name = "optDescendente";
+            this.optDescendente.Size = new System.Drawing.Size(89, 17);
+            this.optDescendente.TabIndex = 1;
+            this.optDescendente.TabStop = true;
+            this.optDescendente.Text = "Descendente";
+            this.optDescendente.UseVisualStyleBackColor = true;
+            // 
             // frmListaDoble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 477);
+            this.ClientSize = new System.Drawing.Size(745, 477);
+            this.Controls.Add(this.gbListarDatos);
             this.Controls.Add(this.gbListado);
             this.Controls.Add(this.gbElementoEliminado);
             this.Controls.Add(this.gbNuevoElemento);
@@ -245,6 +281,8 @@
             this.gbNuevoElemento.ResumeLayout(false);
             this.gbNuevoElemento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbListarDatos.ResumeLayout(false);
+            this.gbListarDatos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -270,5 +308,8 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox gbListarDatos;
+        private System.Windows.Forms.RadioButton optDescendente;
+        private System.Windows.Forms.RadioButton optAscendente;
     }
 }

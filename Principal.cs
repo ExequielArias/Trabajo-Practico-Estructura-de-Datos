@@ -23,8 +23,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
         }
 
         private void datosMiosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
+        { 
             frmDatosMios Datos = new frmDatosMios();
             Datos.ShowDialog(); 
         }
@@ -65,15 +64,13 @@ namespace Trabajo_Practico_Estructura_de_Datos
         }
 
         private void colaToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
+        { 
             frmCola cola = new frmCola();
             cola.ShowDialog();
         }
 
         private void pilaToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
+        { 
             frmPila pila = new frmPila();
             pila.ShowDialog();
         }
@@ -82,6 +79,17 @@ namespace Trabajo_Practico_Estructura_de_Datos
         {
             frmListaSimple ListaSimple = new frmListaSimple();
             ListaSimple.ShowDialog();
+        }
+
+        private void listaDobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaDoble ListaDoble = new frmListaDoble(); 
+            ListaDoble.ShowDialog();
+        }
+
+        private void arbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
