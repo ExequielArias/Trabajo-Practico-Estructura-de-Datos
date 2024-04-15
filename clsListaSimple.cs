@@ -39,6 +39,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
                     clsNodo ant = Primero;
                     while (Nuevo.codigo > aux.codigo)
                     {
+                        //En la variable ant guardo el valor que tenia aux anteriormente minetras la variable aux avanza
                         ant = aux;
                         aux = aux.siguiente;
                         if (aux == null)

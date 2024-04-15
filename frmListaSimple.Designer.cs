@@ -241,6 +241,7 @@
             this.Name = "frmListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista Simple";
+            this.Load += new System.EventHandler(this.frmListaSimple_Load);
             this.gbListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrillaListaSimple)).EndInit();
             this.gbElementoEliminado.ResumeLayout(false);

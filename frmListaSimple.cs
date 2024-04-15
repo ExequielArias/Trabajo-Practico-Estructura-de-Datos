@@ -55,6 +55,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
 
         private void cbCodigoEliminado_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cbCodigoEliminado.Enabled = false; 
             if (cbCodigoEliminado.Text == "")
             {
                 cmdEliminar.Enabled = false;
@@ -63,6 +64,11 @@ namespace Trabajo_Practico_Estructura_de_Datos
             {
                 cmdEliminar.Enabled = true;
             }
+        }
+
+        private void frmListaSimple_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
