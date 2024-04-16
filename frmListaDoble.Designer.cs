@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaDoble));
             this.gbListado = new System.Windows.Forms.GroupBox();
             this.dgvGrillaListaDoble = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -113,9 +114,9 @@
             this.gbElementoEliminado.Controls.Add(this.cbCodigoEliminado);
             this.gbElementoEliminado.Controls.Add(this.cmdEliminar);
             this.gbElementoEliminado.Controls.Add(this.lblCodigoEliminado);
-            this.gbElementoEliminado.Location = new System.Drawing.Point(479, 12);
+            this.gbElementoEliminado.Location = new System.Drawing.Point(547, 12);
             this.gbElementoEliminado.Name = "gbElementoEliminado";
-            this.gbElementoEliminado.Size = new System.Drawing.Size(251, 117);
+            this.gbElementoEliminado.Size = new System.Drawing.Size(183, 117);
             this.gbElementoEliminado.TabIndex = 14;
             this.gbElementoEliminado.TabStop = false;
             this.gbElementoEliminado.Text = "Elemento a Eliminar";
@@ -131,9 +132,9 @@
             // 
             // cmdEliminar
             // 
-            this.cmdEliminar.Location = new System.Drawing.Point(12, 55);
+            this.cmdEliminar.Location = new System.Drawing.Point(12, 52);
             this.cmdEliminar.Name = "cmdEliminar";
-            this.cmdEliminar.Size = new System.Drawing.Size(233, 54);
+            this.cmdEliminar.Size = new System.Drawing.Size(165, 54);
             this.cmdEliminar.TabIndex = 10;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
@@ -142,7 +143,7 @@
             // lblCodigoEliminado
             // 
             this.lblCodigoEliminado.AutoSize = true;
-            this.lblCodigoEliminado.Location = new System.Drawing.Point(6, 28);
+            this.lblCodigoEliminado.Location = new System.Drawing.Point(6, 26);
             this.lblCodigoEliminado.Name = "lblCodigoEliminado";
             this.lblCodigoEliminado.Size = new System.Drawing.Size(43, 13);
             this.lblCodigoEliminado.TabIndex = 7;
@@ -157,7 +158,7 @@
             this.gbNuevoElemento.Controls.Add(this.lblTramite);
             this.gbNuevoElemento.Controls.Add(this.lblNombre);
             this.gbNuevoElemento.Controls.Add(this.lblCodigo);
-            this.gbNuevoElemento.Location = new System.Drawing.Point(222, 12);
+            this.gbNuevoElemento.Location = new System.Drawing.Point(290, 12);
             this.gbNuevoElemento.Name = "gbNuevoElemento";
             this.gbNuevoElemento.Size = new System.Drawing.Size(251, 221);
             this.gbNuevoElemento.TabIndex = 13;
@@ -224,9 +225,10 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 221);
+            this.pictureBox1.Size = new System.Drawing.Size(272, 221);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
@@ -235,9 +237,9 @@
             // 
             this.gbListarDatos.Controls.Add(this.optDescendente);
             this.gbListarDatos.Controls.Add(this.optAscendente);
-            this.gbListarDatos.Location = new System.Drawing.Point(480, 136);
+            this.gbListarDatos.Location = new System.Drawing.Point(547, 136);
             this.gbListarDatos.Name = "gbListarDatos";
-            this.gbListarDatos.Size = new System.Drawing.Size(250, 97);
+            this.gbListarDatos.Size = new System.Drawing.Size(183, 97);
             this.gbListarDatos.TabIndex = 16;
             this.gbListarDatos.TabStop = false;
             this.gbListarDatos.Text = "Listar Datos";
