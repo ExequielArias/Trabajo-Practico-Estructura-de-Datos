@@ -109,9 +109,9 @@
             this.gbElementoEliminado.Controls.Add(this.cbCodigoEliminado);
             this.gbElementoEliminado.Controls.Add(this.cmdEliminar);
             this.gbElementoEliminado.Controls.Add(this.lblCodigoEliminado);
-            this.gbElementoEliminado.Location = new System.Drawing.Point(500, 12);
+            this.gbElementoEliminado.Location = new System.Drawing.Point(565, 12);
             this.gbElementoEliminado.Name = "gbElementoEliminado";
-            this.gbElementoEliminado.Size = new System.Drawing.Size(251, 221);
+            this.gbElementoEliminado.Size = new System.Drawing.Size(186, 149);
             this.gbElementoEliminado.TabIndex = 10;
             this.gbElementoEliminado.TabStop = false;
             this.gbElementoEliminado.Text = "Elemento Eliminado";
@@ -119,17 +119,17 @@
             // cbCodigoEliminado
             // 
             this.cbCodigoEliminado.FormattingEnabled = true;
-            this.cbCodigoEliminado.Location = new System.Drawing.Point(73, 108);
+            this.cbCodigoEliminado.Location = new System.Drawing.Point(58, 32);
             this.cbCodigoEliminado.Name = "cbCodigoEliminado";
-            this.cbCodigoEliminado.Size = new System.Drawing.Size(121, 21);
+            this.cbCodigoEliminado.Size = new System.Drawing.Size(122, 21);
             this.cbCodigoEliminado.TabIndex = 11;
             this.cbCodigoEliminado.SelectedIndexChanged += new System.EventHandler(this.cbCodigoEliminado_SelectedIndexChanged);
             // 
             // cmdEliminar
             // 
-            this.cmdEliminar.Location = new System.Drawing.Point(12, 161);
+            this.cmdEliminar.Location = new System.Drawing.Point(12, 82);
             this.cmdEliminar.Name = "cmdEliminar";
-            this.cmdEliminar.Size = new System.Drawing.Size(233, 54);
+            this.cmdEliminar.Size = new System.Drawing.Size(168, 54);
             this.cmdEliminar.TabIndex = 10;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
@@ -138,7 +138,7 @@
             // lblCodigoEliminado
             // 
             this.lblCodigoEliminado.AutoSize = true;
-            this.lblCodigoEliminado.Location = new System.Drawing.Point(9, 111);
+            this.lblCodigoEliminado.Location = new System.Drawing.Point(9, 35);
             this.lblCodigoEliminado.Name = "lblCodigoEliminado";
             this.lblCodigoEliminado.Size = new System.Drawing.Size(43, 13);
             this.lblCodigoEliminado.TabIndex = 7;
@@ -153,7 +153,7 @@
             this.gbNuevoElemento.Controls.Add(this.lblTramite);
             this.gbNuevoElemento.Controls.Add(this.lblNombre);
             this.gbNuevoElemento.Controls.Add(this.lblCodigo);
-            this.gbNuevoElemento.Location = new System.Drawing.Point(222, 12);
+            this.gbNuevoElemento.Location = new System.Drawing.Point(308, 12);
             this.gbNuevoElemento.Name = "gbNuevoElemento";
             this.gbNuevoElemento.Size = new System.Drawing.Size(251, 221);
             this.gbNuevoElemento.TabIndex = 9;
@@ -223,7 +223,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 221);
+            this.pictureBox1.Size = new System.Drawing.Size(290, 221);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
