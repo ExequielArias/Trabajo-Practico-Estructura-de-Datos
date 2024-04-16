@@ -118,6 +118,7 @@
             // 
             // cbCodigoEliminado
             // 
+            this.cbCodigoEliminado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCodigoEliminado.FormattingEnabled = true;
             this.cbCodigoEliminado.Location = new System.Drawing.Point(58, 32);
             this.cbCodigoEliminado.Name = "cbCodigoEliminado";
