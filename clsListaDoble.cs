@@ -111,6 +111,16 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 aux = aux.anterior; 
             }
         }
+        public void Recorrer(DataGridView Grilla)
+        {
+            clsNodo aux = primero;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.codigo, aux.nombre, aux.tramite);
+                aux = aux.siguiente;
+            }
+        }
         public void RecorrerDes(ListBox Lista)
         {
             clsNodo aux = ultimo;
@@ -119,6 +129,16 @@ namespace Trabajo_Practico_Estructura_de_Datos
             {
                 Lista.Items.Add(aux.codigo);
                 aux = aux.anterior;
+            }
+        }
+        public void Recorrer(ListBox Lista)
+        {
+            clsNodo aux = primero;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.codigo);
+                aux = aux.siguiente;
             }
         }
         public void RecorrerDes(ComboBox cb)
@@ -131,27 +151,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 aux = aux.anterior;
             }
         }
-        public void RecorrerAsc(DataGridView Grilla) 
-        {
-            clsNodo aux = primero;
-            Grilla.Rows.Clear();
-            while (aux != null)
-            {
-                Grilla.Rows.Add(aux.codigo, aux.nombre, aux.tramite);
-                aux = aux.siguiente;
-            }
-        }
-        public void RecorrerAsc(ListBox Lista)
-        {
-            clsNodo aux = primero;
-            Lista.Items.Add(aux.codigo);
-            while (aux != null)
-            {
-                Lista.Items.Add(aux.codigo);
-                aux = aux.siguiente;
-            }
-        }
-        public void RecorrerAsc(ComboBox cb)
+        public void Recorrer(ComboBox cb)
         {
             clsNodo aux = primero;
             cb.Items.Clear();
@@ -164,6 +164,24 @@ namespace Trabajo_Practico_Estructura_de_Datos
         public void Recorrer()
         {
             clsNodo aux = primero;
+            StreamWriter AD = new StreamWriter("Cola.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("codigo; nombre; tramite");
+            while (aux != null)
+            {
+                AD.Write(aux.codigo);
+                AD.Write(";");
+                AD.Write(aux.nombre);
+                AD.Write(";");
+                AD.Write(aux.tramite);
+                AD.Write(";");
+                aux = aux.siguiente;
+            }
+            AD.Close();
+        }
+        public void RecorrerDes()
+        {
+            clsNodo aux = ultimo;
             StreamWriter AD = new StreamWriter("Cola.csv", false, Encoding.UTF8);
             AD.WriteLine("Lista de espera\n");
             AD.WriteLine("codigo; nombre; tramite");

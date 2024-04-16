@@ -25,18 +25,20 @@ namespace Trabajo_Practico_Estructura_de_Datos
 
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
+            
             if (Lista.primero != null)
             {
                 Int32 x = Convert.ToInt32(cbCodigoEliminado.Text);
                 Lista.Eliminar(x);
-                Lista.RecorrerAsc(dgvGrillaListaDoble);
-                Lista.RecorrerAsc(lstListaDoble);
-                Lista.RecorrerAsc(cbCodigoEliminado);
+                Lista.Recorrer(dgvGrillaListaDoble);
+                Lista.Recorrer(lstListaDoble);
+                Lista.Recorrer(cbCodigoEliminado);
                 Lista.Recorrer();
             }
             else
             {
                 MessageBox.Show("La lista esta vacia", "Error", MessageBoxButtons.OK);
+                
             }
             cmdEliminar.Enabled = false;
         }
@@ -47,28 +49,37 @@ namespace Trabajo_Practico_Estructura_de_Datos
             objNodo.codigo = Convert.ToInt32(txtCodigo.Text);
             objNodo.nombre = txtNombre.Text;
             objNodo.tramite = txtTramite.Text;
-            if (optAscendente.Checked)
-            {
-                Lista.Agregar(objNodo);
-                Lista.RecorrerAsc(dgvGrillaListaDoble);
-                Lista.RecorrerAsc(lstListaDoble);
-                Lista.RecorrerAsc(cbCodigoEliminado);
-                Lista.Recorrer();
-            }
-            else
-            {
-                if (optDescendente.Checked)
-                {
-                    Lista.Agregar(objNodo);
-                    Lista.RecorrerDes(dgvGrillaListaDoble);
-                    Lista.RecorrerDes(lstListaDoble);
-                    Lista.RecorrerDes(cbCodigoEliminado);
-                    Lista.Recorrer();
-                }
-            }
+
+            Lista.Agregar(objNodo);
+            Lista.Recorrer(dgvGrillaListaDoble);
+            Lista.Recorrer(lstListaDoble);
+            Lista.Recorrer(cbCodigoEliminado);
+            Lista.Recorrer();
+
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
+        }
+
+        private void dgvGrillaListaDoble_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void optAscendente_CheckedChanged(object sender, EventArgs e)
+        {
+            Lista.Recorrer(dgvGrillaListaDoble);
+            Lista.Recorrer(lstListaDoble);
+            Lista.Recorrer(cbCodigoEliminado);
+            Lista.Recorrer();
+        }
+
+        private void optDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+            Lista.RecorrerDes(dgvGrillaListaDoble);
+            Lista.RecorrerDes(lstListaDoble);
+            Lista.RecorrerDes(cbCodigoEliminado);
+            Lista.RecorrerDes();
         }
     }
 }

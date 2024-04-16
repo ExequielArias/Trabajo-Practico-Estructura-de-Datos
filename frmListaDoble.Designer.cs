@@ -80,6 +80,7 @@
             this.dgvGrillaListaDoble.Name = "dgvGrillaListaDoble";
             this.dgvGrillaListaDoble.Size = new System.Drawing.Size(493, 199);
             this.dgvGrillaListaDoble.TabIndex = 1;
+            this.dgvGrillaListaDoble.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrillaListaDoble_CellContentClick);
             // 
             // Codigo
             // 
@@ -121,6 +122,7 @@
             // 
             // cbCodigoEliminado
             // 
+            this.cbCodigoEliminado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCodigoEliminado.FormattingEnabled = true;
             this.cbCodigoEliminado.Location = new System.Drawing.Point(55, 23);
             this.cbCodigoEliminado.Name = "cbCodigoEliminado";
@@ -250,10 +252,12 @@
             this.optDescendente.TabStop = true;
             this.optDescendente.Text = "Descendente";
             this.optDescendente.UseVisualStyleBackColor = true;
+            this.optDescendente.CheckedChanged += new System.EventHandler(this.optDescendente_CheckedChanged);
             // 
             // optAscendente
             // 
             this.optAscendente.AutoSize = true;
+            this.optAscendente.Checked = true;
             this.optAscendente.Location = new System.Drawing.Point(8, 32);
             this.optAscendente.Name = "optAscendente";
             this.optAscendente.Size = new System.Drawing.Size(82, 17);
@@ -261,6 +265,7 @@
             this.optAscendente.TabStop = true;
             this.optAscendente.Text = "Ascendente";
             this.optAscendente.UseVisualStyleBackColor = true;
+            this.optAscendente.CheckedChanged += new System.EventHandler(this.optAscendente_CheckedChanged);
             // 
             // frmListaDoble
             // 

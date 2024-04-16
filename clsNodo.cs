@@ -13,7 +13,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
         private string nom;
         private string tra;
         private clsNodo sig;
-        private string ant; 
+        private clsNodo ant; 
 
         //propiedades del nodo
         public Int32 codigo 
@@ -38,8 +38,8 @@ namespace Trabajo_Practico_Estructura_de_Datos
         }
         public clsNodo anterior 
         {
-            get { return anterior; }    
-            set { anterior = value; }
+            get { return ant; }
+            set { ant = value; }
         }
     }
 }
