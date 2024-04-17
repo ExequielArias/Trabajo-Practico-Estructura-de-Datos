@@ -89,7 +89,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
                     {
                         clsNodo aux = primero;
                         clsNodo ant = primero;
-                        while (aux.codigo < codigo)
+                        while (aux != null && aux.codigo < codigo)
                         {
                             ant = aux;
                             aux = aux.siguiente; 

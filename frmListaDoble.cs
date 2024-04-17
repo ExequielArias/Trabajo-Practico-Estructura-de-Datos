@@ -40,7 +40,6 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 MessageBox.Show("La lista esta vacia", "Error", MessageBoxButtons.OK);
                 
             }
-            cmdEliminar.Enabled = false;
         }
 
         private void cmdAgregar_Click(object sender, EventArgs e)

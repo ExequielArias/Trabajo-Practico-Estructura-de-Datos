@@ -41,5 +41,15 @@ namespace Trabajo_Practico_Estructura_de_Datos
             get { return ant; }
             set { ant = value; }
         }
+        public clsNodo izquierdo
+        {
+            get { return ant; }
+            set { ant = value; }
+        }
+        public clsNodo derecho 
+        {
+            get { return sig; }
+            set { sig = value; }
+        }
     }
 }
