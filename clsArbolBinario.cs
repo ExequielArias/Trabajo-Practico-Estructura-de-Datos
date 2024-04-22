@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Trabajo_Practico_Estructura_de_Datos
 {
-    
+
     internal class clsArbolBinario
     {
         //Creo el campo inicial del arbol. Lo llamaremos raiz
@@ -15,13 +15,13 @@ namespace Trabajo_Practico_Estructura_de_Datos
 
 
         //Creo la unica propiedad que necesito
-        public clsNodo Raiz 
+        public clsNodo Raiz
         {
-            get { return PrimerNodo; }  
-            set { PrimerNodo = value; } 
+            get { return PrimerNodo; }
+            set { PrimerNodo = value; }
         }
 
-        public void Agregar(clsNodo Nuevo) 
+        public void Agregar(clsNodo Nuevo)
         {
             Nuevo.izquierdo = null;
             Nuevo.derecho = null;
@@ -38,16 +38,16 @@ namespace Trabajo_Practico_Estructura_de_Datos
                     Padre = Aux;
                     if (Nuevo.codigo < Aux.codigo)
                     {
-                        Aux = Aux.izquierdo; 
+                        Aux = Aux.izquierdo;
                     }
                     else
                     {
-                        Aux = Aux.derecho; 
+                        Aux = Aux.derecho;
                     }
                 }
                 if (Nuevo.codigo < Padre.codigo)
                 {
-                    Padre.izquierdo = Nuevo; 
+                    Padre.izquierdo = Nuevo;
                 }
                 else
                 {
@@ -55,12 +55,12 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 }
             }
         }
-        public void Recorrer(ComboBox Lista) 
+        public void Recorrer(ComboBox Lista)
         {
             Lista.Items.Clear();
-            InOrdenAsc(Lista, Raiz); 
+            InOrdenAsc(Lista, Raiz);
         }
-        private void InOrdenAsc(ComboBox lst, clsNodo R) 
+        private void InOrdenAsc(ComboBox lst, clsNodo R)
         {
             if (R.izquierdo != null)
             {
@@ -72,12 +72,12 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 InOrdenAsc(lst, R.derecho);
             }
         }
-        public void Recorrer(DataGridView Grilla) 
+        public void Recorrer(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
             InOrdenAsc(Grilla, Raiz);
         }
-        private void InOrdenAsc(DataGridView Dgv, clsNodo R) 
+        private void InOrdenAsc(DataGridView Dgv, clsNodo R)
         {
             if (R.izquierdo != null)
             {
@@ -86,16 +86,16 @@ namespace Trabajo_Practico_Estructura_de_Datos
             Dgv.Rows.Add(R.codigo, R.nombre, R.tramite);
             if (R.derecho != null)
             {
-                InOrdenAsc(Dgv, R.derecho); 
+                InOrdenAsc(Dgv, R.derecho);
             }
         }
-        public void Recorrer(TreeView tree) 
+        public void Recorrer(TreeView tree)
         {
             tree.Nodes.Clear();
             TreeNode Padre = new TreeNode("Arbol");
             tree.Nodes.Add(Padre);
             PreOrden(Raiz, Padre);
-            tree.ExpandAll(); 
+            tree.ExpandAll();
         }
         private void PreOrden(clsNodo R, TreeNode nodoTreeView)
         {
@@ -107,8 +107,46 @@ namespace Trabajo_Practico_Estructura_de_Datos
             }
             if (R.derecho != null)
             {
-                PreOrden(R.derecho, Padre); 
+                PreOrden(R.derecho, Padre);
             }
         }
+
+        public void RecorrerDes(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            InOrdenDes(Grilla, Raiz);
+        }
+        private void InOrdenDes(DataGridView Dgv, clsNodo R)
+        {
+            if (R.derecho != null)
+            {
+                InOrdenAsc(Dgv, R.derecho);
+            }
+            Dgv.Rows.Add(R.codigo, R.nombre, R.tramite);
+            if (R.izquierdo != null)
+            {
+                InOrdenAsc(Dgv, R.izquierdo);
+            }
+        }
+
+        public void RecorrerDes(ComboBox Lista)
+        {
+            Lista.Items.Clear();
+            InOrdenDes(Lista, Raiz);
+        }
+        private void InOrdenDes(ComboBox lst, clsNodo R)
+        {
+            if (R.derecho != null)
+            {
+                InOrdenAsc(lst, R.derecho);
+            }
+            lst.Items.Add(R.codigo);
+            if (R.izquierdo != null)
+            {
+                InOrdenAsc(lst, R.izquierdo);
+            }
+        }
+
+
     }
 }

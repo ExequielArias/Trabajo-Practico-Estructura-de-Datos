@@ -32,6 +32,35 @@ namespace Trabajo_Practico_Estructura_de_Datos
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
+            Lista.Recorrer(tvMostrar); 
+        }
+
+        private void cmdEliminar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void optInOrden_CheckedChanged(object sender, EventArgs e)
+        {
+
+            Lista.Recorrer(tvMostrar);
+        }
+
+        private void InOrdenDes_CheckedChanged(object sender, EventArgs e)
+        {
+            Lista.RecorrerDes(dgvGrillaArbolBinario);
+            Lista.RecorrerDes(cbCodigoEliminado);
+            Lista.Recorrer(tvMostrar);
+        }
+
+        private void optPreOrden_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void optPostOrden_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

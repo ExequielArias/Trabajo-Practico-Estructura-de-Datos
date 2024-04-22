@@ -30,7 +30,6 @@
         {
             this.tvMostrar = new System.Windows.Forms.TreeView();
             this.gbNuevoElemento = new System.Windows.Forms.GroupBox();
-            this.gbElementoEliminado = new System.Windows.Forms.GroupBox();
             this.txtTramite = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -38,6 +37,7 @@
             this.lblTramite = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
+            this.gbElementoEliminado = new System.Windows.Forms.GroupBox();
             this.cbCodigoEliminado = new System.Windows.Forms.ComboBox();
             this.cmdEliminar = new System.Windows.Forms.Button();
             this.lblCodigoEliminado = new System.Windows.Forms.Label();
@@ -47,9 +47,10 @@
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.optInOrden = new System.Windows.Forms.RadioButton();
-            this.optPreOrden = new System.Windows.Forms.RadioButton();
             this.optPostOrden = new System.Windows.Forms.RadioButton();
+            this.optPreOrden = new System.Windows.Forms.RadioButton();
+            this.optInOrden = new System.Windows.Forms.RadioButton();
+            this.InOrdenDes = new System.Windows.Forms.RadioButton();
             this.gbNuevoElemento.SuspendLayout();
             this.gbElementoEliminado.SuspendLayout();
             this.gbListadoArbol.SuspendLayout();
@@ -78,18 +79,6 @@
             this.gbNuevoElemento.TabIndex = 1;
             this.gbNuevoElemento.TabStop = false;
             this.gbNuevoElemento.Text = "Nuevo Elemento";
-            // 
-            // gbElementoEliminado
-            // 
-            this.gbElementoEliminado.Controls.Add(this.cbCodigoEliminado);
-            this.gbElementoEliminado.Controls.Add(this.cmdEliminar);
-            this.gbElementoEliminado.Controls.Add(this.lblCodigoEliminado);
-            this.gbElementoEliminado.Location = new System.Drawing.Point(488, 12);
-            this.gbElementoEliminado.Name = "gbElementoEliminado";
-            this.gbElementoEliminado.Size = new System.Drawing.Size(216, 173);
-            this.gbElementoEliminado.TabIndex = 2;
-            this.gbElementoEliminado.TabStop = false;
-            this.gbElementoEliminado.Text = "Elemento A Eliminar";
             // 
             // txtTramite
             // 
@@ -149,6 +138,18 @@
             this.lblCodigo.TabIndex = 7;
             this.lblCodigo.Text = "Codigo:";
             // 
+            // gbElementoEliminado
+            // 
+            this.gbElementoEliminado.Controls.Add(this.cbCodigoEliminado);
+            this.gbElementoEliminado.Controls.Add(this.cmdEliminar);
+            this.gbElementoEliminado.Controls.Add(this.lblCodigoEliminado);
+            this.gbElementoEliminado.Location = new System.Drawing.Point(488, 12);
+            this.gbElementoEliminado.Name = "gbElementoEliminado";
+            this.gbElementoEliminado.Size = new System.Drawing.Size(216, 173);
+            this.gbElementoEliminado.TabIndex = 2;
+            this.gbElementoEliminado.TabStop = false;
+            this.gbElementoEliminado.Text = "Elemento A Eliminar";
+            // 
             // cbCodigoEliminado
             // 
             this.cbCodigoEliminado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -166,6 +167,7 @@
             this.cmdEliminar.TabIndex = 13;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // lblCodigoEliminado
             // 
@@ -187,6 +189,7 @@
             // 
             // gbListadoArbol
             // 
+            this.gbListadoArbol.Controls.Add(this.InOrdenDes);
             this.gbListadoArbol.Controls.Add(this.dgvGrillaArbolBinario);
             this.gbListadoArbol.Controls.Add(this.optPostOrden);
             this.gbListadoArbol.Controls.Add(this.optPreOrden);
@@ -234,37 +237,52 @@
             this.Tramite.ReadOnly = true;
             this.Tramite.Width = 150;
             // 
+            // optPostOrden
+            // 
+            this.optPostOrden.AutoSize = true;
+            this.optPostOrden.Location = new System.Drawing.Point(18, 182);
+            this.optPostOrden.Name = "optPostOrden";
+            this.optPostOrden.Size = new System.Drawing.Size(78, 17);
+            this.optPostOrden.TabIndex = 2;
+            this.optPostOrden.Text = "Post-Orden";
+            this.optPostOrden.UseVisualStyleBackColor = true;
+            this.optPostOrden.CheckedChanged += new System.EventHandler(this.optPostOrden_CheckedChanged);
+            // 
+            // optPreOrden
+            // 
+            this.optPreOrden.AutoSize = true;
+            this.optPreOrden.Location = new System.Drawing.Point(18, 139);
+            this.optPreOrden.Name = "optPreOrden";
+            this.optPreOrden.Size = new System.Drawing.Size(73, 17);
+            this.optPreOrden.TabIndex = 1;
+            this.optPreOrden.Text = "Pre-Orden";
+            this.optPreOrden.UseVisualStyleBackColor = true;
+            this.optPreOrden.CheckedChanged += new System.EventHandler(this.optPreOrden_CheckedChanged);
+            // 
             // optInOrden
             // 
             this.optInOrden.AutoSize = true;
             this.optInOrden.Checked = true;
-            this.optInOrden.Location = new System.Drawing.Point(18, 57);
+            this.optInOrden.Location = new System.Drawing.Point(18, 61);
             this.optInOrden.Name = "optInOrden";
             this.optInOrden.Size = new System.Drawing.Size(66, 17);
             this.optInOrden.TabIndex = 0;
             this.optInOrden.TabStop = true;
             this.optInOrden.Text = "In-Orden";
             this.optInOrden.UseVisualStyleBackColor = true;
+            this.optInOrden.CheckedChanged += new System.EventHandler(this.optInOrden_CheckedChanged);
             // 
-            // optPreOrden
+            // InOrdenDes
             // 
-            this.optPreOrden.AutoSize = true;
-            this.optPreOrden.Location = new System.Drawing.Point(18, 110);
-            this.optPreOrden.Name = "optPreOrden";
-            this.optPreOrden.Size = new System.Drawing.Size(73, 17);
-            this.optPreOrden.TabIndex = 1;
-            this.optPreOrden.Text = "Pre-Orden";
-            this.optPreOrden.UseVisualStyleBackColor = true;
-            // 
-            // optPostOrden
-            // 
-            this.optPostOrden.AutoSize = true;
-            this.optPostOrden.Location = new System.Drawing.Point(18, 168);
-            this.optPostOrden.Name = "optPostOrden";
-            this.optPostOrden.Size = new System.Drawing.Size(78, 17);
-            this.optPostOrden.TabIndex = 2;
-            this.optPostOrden.Text = "Post-Orden";
-            this.optPostOrden.UseVisualStyleBackColor = true;
+            this.InOrdenDes.AutoSize = true;
+            this.InOrdenDes.Location = new System.Drawing.Point(18, 101);
+            this.InOrdenDes.Name = "InOrdenDes";
+            this.InOrdenDes.Size = new System.Drawing.Size(85, 17);
+            this.InOrdenDes.TabIndex = 6;
+            this.InOrdenDes.TabStop = true;
+            this.InOrdenDes.Text = "In-OrdenDes";
+            this.InOrdenDes.UseVisualStyleBackColor = true;
+            this.InOrdenDes.CheckedChanged += new System.EventHandler(this.InOrdenDes_CheckedChanged);
             // 
             // frmArbolBinario
             // 
@@ -315,5 +333,6 @@
         private System.Windows.Forms.RadioButton optPostOrden;
         private System.Windows.Forms.RadioButton optPreOrden;
         private System.Windows.Forms.RadioButton optInOrden;
+        private System.Windows.Forms.RadioButton InOrdenDes;
     }
 }
