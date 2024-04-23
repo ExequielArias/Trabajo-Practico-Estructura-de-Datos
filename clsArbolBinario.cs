@@ -97,6 +97,21 @@ namespace Trabajo_Practico_Estructura_de_Datos
             PreOrden(Raiz, Padre);
             tree.ExpandAll();
         }
+        public void RecorrerPreOrden(DataGridView Grilla) 
+        {
+            //Grilla.Rows.Clear();
+            //TreeNode Padre = new TreeNode("Arbol");
+            //Grilla.Rows.Add(Padre);
+            //PreOrden(Raiz, Padre);
+        }
+        public void RecorrerPreOrden(ComboBox lista)
+        {
+            //lista.Items.Clear();
+            //TreeNode Padre = new TreeNode("Arbol");
+            //lista.Items.Add(Padre);
+            //PreOrden(Raiz, Padre);
+        }
+
         private void PreOrden(clsNodo R, TreeNode nodoTreeView)
         {
             TreeNode Padre = new TreeNode(R.codigo.ToString());

@@ -43,6 +43,7 @@
             this.lblCodigoEliminado = new System.Windows.Forms.Label();
             this.cmdEquilibrar = new System.Windows.Forms.Button();
             this.gbListadoArbol = new System.Windows.Forms.GroupBox();
+            this.InOrdenDes = new System.Windows.Forms.RadioButton();
             this.dgvGrillaArbolBinario = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +51,6 @@
             this.optPostOrden = new System.Windows.Forms.RadioButton();
             this.optPreOrden = new System.Windows.Forms.RadioButton();
             this.optInOrden = new System.Windows.Forms.RadioButton();
-            this.InOrdenDes = new System.Windows.Forms.RadioButton();
             this.gbNuevoElemento.SuspendLayout();
             this.gbElementoEliminado.SuspendLayout();
             this.gbListadoArbol.SuspendLayout();
@@ -201,6 +201,18 @@
             this.gbListadoArbol.TabStop = false;
             this.gbListadoArbol.Text = "Listado Del Arbol";
             // 
+            // InOrdenDes
+            // 
+            this.InOrdenDes.AutoSize = true;
+            this.InOrdenDes.Location = new System.Drawing.Point(18, 101);
+            this.InOrdenDes.Name = "InOrdenDes";
+            this.InOrdenDes.Size = new System.Drawing.Size(85, 17);
+            this.InOrdenDes.TabIndex = 6;
+            this.InOrdenDes.TabStop = true;
+            this.InOrdenDes.Text = "In-OrdenDes";
+            this.InOrdenDes.UseVisualStyleBackColor = true;
+            this.InOrdenDes.CheckedChanged += new System.EventHandler(this.InOrdenDes_CheckedChanged);
+            // 
             // dgvGrillaArbolBinario
             // 
             this.dgvGrillaArbolBinario.AllowUserToAddRows = false;
@@ -272,18 +284,6 @@
             this.optInOrden.UseVisualStyleBackColor = true;
             this.optInOrden.CheckedChanged += new System.EventHandler(this.optInOrden_CheckedChanged);
             // 
-            // InOrdenDes
-            // 
-            this.InOrdenDes.AutoSize = true;
-            this.InOrdenDes.Location = new System.Drawing.Point(18, 101);
-            this.InOrdenDes.Name = "InOrdenDes";
-            this.InOrdenDes.Size = new System.Drawing.Size(85, 17);
-            this.InOrdenDes.TabIndex = 6;
-            this.InOrdenDes.TabStop = true;
-            this.InOrdenDes.Text = "In-OrdenDes";
-            this.InOrdenDes.UseVisualStyleBackColor = true;
-            this.InOrdenDes.CheckedChanged += new System.EventHandler(this.InOrdenDes_CheckedChanged);
-            // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,7 +297,8 @@
             this.MaximizeBox = false;
             this.Name = "frmArbolBinario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmArbolBinario";
+            this.Text = "Arbol Binario";
+            this.Load += new System.EventHandler(this.frmArbolBinario_Load);
             this.gbNuevoElemento.ResumeLayout(false);
             this.gbNuevoElemento.PerformLayout();
             this.gbElementoEliminado.ResumeLayout(false);

@@ -99,28 +99,28 @@
             // colaToolStripMenuItem1
             // 
             this.colaToolStripMenuItem1.Name = "colaToolStripMenuItem1";
-            this.colaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.colaToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.colaToolStripMenuItem1.Text = "Cola";
             this.colaToolStripMenuItem1.Click += new System.EventHandler(this.colaToolStripMenuItem1_Click);
             // 
             // pilaToolStripMenuItem1
             // 
             this.pilaToolStripMenuItem1.Name = "pilaToolStripMenuItem1";
-            this.pilaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.pilaToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.pilaToolStripMenuItem1.Text = "Pila";
             this.pilaToolStripMenuItem1.Click += new System.EventHandler(this.pilaToolStripMenuItem1_Click);
             // 
             // listaSimpleToolStripMenuItem
             // 
             this.listaSimpleToolStripMenuItem.Name = "listaSimpleToolStripMenuItem";
-            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.listaSimpleToolStripMenuItem.Text = "Lista Simple";
             this.listaSimpleToolStripMenuItem.Click += new System.EventHandler(this.listaSimpleToolStripMenuItem_Click);
             // 
             // listaDobleToolStripMenuItem
             // 
             this.listaDobleToolStripMenuItem.Name = "listaDobleToolStripMenuItem";
-            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.listaDobleToolStripMenuItem.Text = "Lista Doble";
             this.listaDobleToolStripMenuItem.Click += new System.EventHandler(this.listaDobleToolStripMenuItem_Click);
             // 
@@ -136,7 +136,7 @@
             // arbolBinarioToolStripMenuItem
             // 
             this.arbolBinarioToolStripMenuItem.Name = "arbolBinarioToolStripMenuItem";
-            this.arbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.arbolBinarioToolStripMenuItem.Text = "Arbol Binario";
             this.arbolBinarioToolStripMenuItem.Click += new System.EventHandler(this.arbolBinarioToolStripMenuItem_Click);
             // 
@@ -175,7 +175,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(733, 407);
             this.Controls.Add(this.menuStrip1);
             this.MaximizeBox = false;

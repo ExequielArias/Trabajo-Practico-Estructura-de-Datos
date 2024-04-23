@@ -42,23 +42,28 @@ namespace Trabajo_Practico_Estructura_de_Datos
 
         private void optInOrden_CheckedChanged(object sender, EventArgs e)
         {
-
-            Lista.Recorrer(tvMostrar);
+            Lista.Recorrer(dgvGrillaArbolBinario);
+            Lista.Recorrer(cbCodigoEliminado); 
         }
 
         private void InOrdenDes_CheckedChanged(object sender, EventArgs e)
         {
             Lista.RecorrerDes(dgvGrillaArbolBinario);
             Lista.RecorrerDes(cbCodigoEliminado);
-            Lista.Recorrer(tvMostrar);
         }
 
         private void optPreOrden_CheckedChanged(object sender, EventArgs e)
         {
-
+            //Lista.RecorrerPreOrden(dgvGrillaArbolBinario);
+            //Lista.RecorrerPreOrden(cbCodigoEliminado); 
         }
 
         private void optPostOrden_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmArbolBinario_Load(object sender, EventArgs e)
         {
 
         }
