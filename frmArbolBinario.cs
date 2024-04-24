@@ -37,7 +37,14 @@ namespace Trabajo_Practico_Estructura_de_Datos
 
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-            
+            //if (Lista.primero != null)
+            //{
+            //    Int32 x = Convert.ToInt32(cbCodigoEliminado.Text);
+            //    Lista.Eliminar(x);
+            //    Lista.Recorrer(dgvGrillaArbolBinario);
+            //    Lista.Recorrer(cbCodigoEliminado);
+            //    Lista.Recorrer(); 
+            //}
         }
 
         private void optInOrden_CheckedChanged(object sender, EventArgs e)
