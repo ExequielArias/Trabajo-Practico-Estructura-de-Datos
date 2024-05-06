@@ -38,7 +38,6 @@ namespace Trabajo_Practico_Estructura_de_Datos
             else
             {
                 MessageBox.Show("La lista esta vacia", "Error", MessageBoxButtons.OK);
-                
             }
         }
 

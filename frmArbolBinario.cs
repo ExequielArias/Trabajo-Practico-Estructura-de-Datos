@@ -74,5 +74,10 @@ namespace Trabajo_Practico_Estructura_de_Datos
         {
 
         }
+
+        private void cmdEquilibrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -186,6 +186,7 @@
             this.cmdEquilibrar.TabIndex = 3;
             this.cmdEquilibrar.Text = "Equilibrar";
             this.cmdEquilibrar.UseVisualStyleBackColor = true;
+            this.cmdEquilibrar.Click += new System.EventHandler(this.cmdEquilibrar_Click);
             // 
             // gbListadoArbol
             // 
