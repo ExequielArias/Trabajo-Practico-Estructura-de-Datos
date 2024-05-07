@@ -126,6 +126,7 @@
             // 
             // txtTramiteE
             // 
+            this.txtTramiteE.Enabled = false;
             this.txtTramiteE.Location = new System.Drawing.Point(70, 116);
             this.txtTramiteE.Name = "txtTramiteE";
             this.txtTramiteE.Size = new System.Drawing.Size(100, 20);
@@ -133,6 +134,7 @@
             // 
             // txtNombreE
             // 
+            this.txtNombreE.Enabled = false;
             this.txtNombreE.Location = new System.Drawing.Point(70, 73);
             this.txtNombreE.Name = "txtNombreE";
             this.txtNombreE.Size = new System.Drawing.Size(100, 20);
@@ -140,6 +142,7 @@
             // 
             // txtCodigoE
             // 
+            this.txtCodigoE.Enabled = false;
             this.txtCodigoE.Location = new System.Drawing.Point(70, 28);
             this.txtCodigoE.Name = "txtCodigoE";
             this.txtCodigoE.Size = new System.Drawing.Size(100, 20);

@@ -20,17 +20,25 @@ namespace Trabajo_Practico_Estructura_de_Datos
 
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo objNodo = new clsNodo();
-            objNodo.codigo = Convert.ToInt32(txtCodigo.Text);
-            objNodo.nombre = txtNombre.Text;
-            objNodo.tramite = txtTramite.Text;
-            FilaDePersonas.Agregar(objNodo);
-            FilaDePersonas.Recorrer(dgvGrillaPila);
-            FilaDePersonas.Recorrer(lstPila);
-            FilaDePersonas.Recorrer();
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+            try
+            {
+                clsNodo objNodo = new clsNodo();
+                objNodo.codigo = Convert.ToInt32(txtCodigo.Text);
+                objNodo.nombre = txtNombre.Text;
+                objNodo.tramite = txtTramite.Text;
+                FilaDePersonas.Agregar(objNodo);
+                FilaDePersonas.Recorrer(dgvGrillaPila);
+                FilaDePersonas.Recorrer(lstPila);
+                FilaDePersonas.Recorrer();
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Agregue datos", "Error"); 
+            }
+           
         }
 
         private void cmdEliminar_Click(object sender, EventArgs e)

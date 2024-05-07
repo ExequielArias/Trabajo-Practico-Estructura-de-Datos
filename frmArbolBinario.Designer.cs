@@ -289,7 +289,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 540);
+            this.ClientSize = new System.Drawing.Size(717, 530);
             this.Controls.Add(this.gbListadoArbol);
             this.Controls.Add(this.cmdEquilibrar);
             this.Controls.Add(this.gbElementoEliminado);

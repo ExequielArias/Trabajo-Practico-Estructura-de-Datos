@@ -43,20 +43,28 @@ namespace Trabajo_Practico_Estructura_de_Datos
 
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo objNodo = new clsNodo();
-            objNodo.codigo = Convert.ToInt32(txtCodigo.Text);
-            objNodo.nombre = txtNombre.Text;
-            objNodo.tramite = txtTramite.Text;
+            try
+            {
+                clsNodo objNodo = new clsNodo();
+                objNodo.codigo = Convert.ToInt32(txtCodigo.Text);
+                objNodo.nombre = txtNombre.Text;
+                objNodo.tramite = txtTramite.Text;
 
-            Lista.Agregar(objNodo);
-            Lista.Recorrer(dgvGrillaListaDoble);
-            Lista.Recorrer(lstListaDoble);
-            Lista.Recorrer(cbCodigoEliminado);
-            Lista.Recorrer();
+                Lista.Agregar(objNodo);
+                Lista.Recorrer(dgvGrillaListaDoble);
+                Lista.Recorrer(lstListaDoble);
+                Lista.Recorrer(cbCodigoEliminado);
+                Lista.Recorrer();
 
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Agregue Datos", "Error"); 
+            }
+           
         }
 
         private void dgvGrillaListaDoble_CellContentClick(object sender, DataGridViewCellEventArgs e)

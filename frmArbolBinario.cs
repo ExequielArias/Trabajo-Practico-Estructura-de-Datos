@@ -21,36 +21,62 @@ namespace Trabajo_Practico_Estructura_de_Datos
 
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo objNodo = new clsNodo();
-            objNodo.codigo = Convert.ToInt32(txtCodigo.Text);
-            objNodo.nombre = txtNombre.Text;
-            objNodo.tramite = txtTramite.Text;
+            try
+            {
+                clsNodo objNodo = new clsNodo();
+                objNodo.codigo = Convert.ToInt32(txtCodigo.Text);
+                objNodo.nombre = txtNombre.Text;
+                objNodo.tramite = txtTramite.Text;
 
-            Lista.Agregar(objNodo);
-            Lista.Recorrer(dgvGrillaArbolBinario);
-            Lista.Recorrer(cbCodigoEliminado);
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
-            Lista.Recorrer(tvMostrar); 
+                Lista.Agregar(objNodo);
+                Lista.Recorrer(dgvGrillaArbolBinario);
+                Lista.Recorrer(cbCodigoEliminado);
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
+                Lista.RecorrerPre(tvMostrar);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ingrese Datos", "Error");
+            }
         }
 
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-            //if (Lista.primero != null)
-            //{
-            //    Int32 x = Convert.ToInt32(cbCodigoEliminado.Text);
-            //    Lista.Eliminar(x);
-            //    Lista.Recorrer(dgvGrillaArbolBinario);
-            //    Lista.Recorrer(cbCodigoEliminado);
-            //    Lista.Recorrer(); 
-            //}
+            try
+            {
+                Lista.Eliminar(Convert.ToInt32(cbCodigoEliminado.Text));
+                if (Lista.Raiz != null)
+                {
+                    Lista.Recorrer(dgvGrillaArbolBinario);
+                    Lista.RecorrerPre(tvMostrar);
+                    Lista.Recorrer(cbCodigoEliminado);
+                    Lista.Recorrer(); 
+
+                }
+                else
+                {
+                    cbCodigoEliminado.Items.Clear();
+                    dgvGrillaArbolBinario.Rows.Clear();
+                    tvMostrar.Nodes.Clear();
+                }
+                cbCodigoEliminado.SelectedIndex = -1;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No hay datos a eliminar", "Error"); 
+            }
+           
         }
 
         private void optInOrden_CheckedChanged(object sender, EventArgs e)
         {
-            Lista.Recorrer(dgvGrillaArbolBinario);
-            Lista.Recorrer(cbCodigoEliminado); 
+            if (optInOrden.Checked)
+            {
+                Lista.Recorrer(dgvGrillaArbolBinario);
+                Lista.Recorrer(cbCodigoEliminado);
+            }
         }
 
         private void InOrdenDes_CheckedChanged(object sender, EventArgs e)
@@ -61,13 +87,19 @@ namespace Trabajo_Practico_Estructura_de_Datos
 
         private void optPreOrden_CheckedChanged(object sender, EventArgs e)
         {
-            //Lista.RecorrerPreOrden(dgvGrillaArbolBinario);
-            //Lista.RecorrerPreOrden(cbCodigoEliminado); 
+            if (optPreOrden.Checked)
+            {
+                Lista.RecorrerPre(dgvGrillaArbolBinario);
+                Lista.RecorrerPre(tvMostrar); 
+            }
         }
 
         private void optPostOrden_CheckedChanged(object sender, EventArgs e)
         {
+            if (optPostOrden.Checked)
+            {
 
+            }
         }
 
         private void frmArbolBinario_Load(object sender, EventArgs e)
@@ -77,7 +109,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
 
         private void cmdEquilibrar_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
