@@ -131,11 +131,11 @@ namespace Trabajo_Practico_Estructura_de_Datos
         public void Recorrer() 
         {
             clsNodo aux = Raiz;
-            StreamWriter AD = new StreamWriter("Arbol Binario.csv", false, Encoding.UTF8);
+            StreamWriter AD = new StreamWriter("ArbolBinario.csv", false, Encoding.UTF8);
             AD.WriteLine("Lista de espera\n");
-            AD.WriteLine("Codigo, Nombre, Tranite");
-            InOrdenAsc(Raiz, AD);
-            AD.Close(); 
+            AD.WriteLine("codigo; nombre; tramite");
+            InOrdenAsc(Raiz, AD); 
+            AD.Close();
         }
         private void InOrdenAsc(clsNodo R, StreamWriter AD) 
         {
@@ -232,6 +232,37 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 PreOrden(lst, R.derecho);
             }
         }
+        private void PreOrden(clsNodo R, DataGridView Grilla)
+        {
+            Grilla.Rows.Add(R.codigo, R.nombre, R.tramite);
+            if (R.izquierdo != null)
+            {
+                PreOrden(R.izquierdo, Grilla);
+            }
+            if (R.derecho != null)
+            {
+                PreOrden(R.derecho, Grilla);
+            }
+        }
+        private void PreOrden(clsNodo R, TreeNode nodoTreeView)
+        {
+            TreeNode Padre = new TreeNode(R.codigo.ToString());
+            nodoTreeView.Nodes.Add(Padre);
+            if (R.izquierdo != null)
+            {
+                PreOrden(R.izquierdo, Padre);
+            }
+            if (R.derecho != null)
+            {
+                PreOrden(R.derecho, Padre);
+            }
+        }
+        public void RecorrerPre(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PreOrden(Raiz, Grilla);
+        }
+
         public void PostOrden(ComboBox lst, clsNodo R)
         {
             if (R.izquierdo != null)
@@ -252,39 +283,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
             PreOrden(Raiz, Padre);
             tree.ExpandAll();
         }
-        public void RecorrerPre(DataGridView Grilla)
-        {
-            Grilla.Rows.Clear();
-            PreOrden(Raiz, Grilla);
-        }
-
-        private void PreOrden(clsNodo R, DataGridView Grilla)
-        {
-            Grilla.Rows.Add(R.codigo, R.nombre, R.tramite);
-            if (R.izquierdo != null) 
-            {
-                PreOrden(R.izquierdo, Grilla);
-            }
-            if (R.derecho != null) 
-            {
-                PreOrden(R.derecho, Grilla);
-            } 
-        }
-
-        private void PreOrden(clsNodo R, TreeNode nodoTreeView)
-        {
-            TreeNode Padre = new TreeNode(R.codigo.ToString());
-            nodoTreeView.Nodes.Add(Padre);
-            if (R.izquierdo != null)
-            {
-                PreOrden(R.izquierdo, Padre);
-            }
-            if (R.derecho != null)
-            {
-                PreOrden(R.derecho, Padre);
-            }
-        }
-
+       
         public void RecorrerDes(DataGridView Grilla)
         {
             Grilla.Rows.Clear();

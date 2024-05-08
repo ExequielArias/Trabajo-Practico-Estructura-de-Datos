@@ -164,7 +164,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
         public void Recorrer()
         {
             clsNodo aux = primero;
-            StreamWriter AD = new StreamWriter("Cola.csv", false, Encoding.UTF8);
+            StreamWriter AD = new StreamWriter("ListaDoble.csv", false, Encoding.UTF8);
             AD.WriteLine("Lista de espera\n");
             AD.WriteLine("codigo; nombre; tramite");
             while (aux != null)
@@ -182,7 +182,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
         public void RecorrerDes()
         {
             clsNodo aux = ultimo;
-            StreamWriter AD = new StreamWriter("Cola.csv", false, Encoding.UTF8);
+            StreamWriter AD = new StreamWriter("ListaDobleDesc.csv", false, Encoding.UTF8);
             AD.WriteLine("Lista de espera\n");
             AD.WriteLine("codigo; nombre; tramite");
             while (aux != null)

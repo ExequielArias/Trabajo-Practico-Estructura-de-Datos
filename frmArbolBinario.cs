@@ -27,14 +27,14 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 objNodo.codigo = Convert.ToInt32(txtCodigo.Text);
                 objNodo.nombre = txtNombre.Text;
                 objNodo.tramite = txtTramite.Text;
-
                 Lista.Agregar(objNodo);
                 Lista.Recorrer(dgvGrillaArbolBinario);
                 Lista.Recorrer(cbCodigoEliminado);
+                Lista.RecorrerPre(tvMostrar);
+                Lista.Recorrer();
                 txtCodigo.Text = "";
                 txtNombre.Text = "";
                 txtTramite.Text = "";
-                Lista.RecorrerPre(tvMostrar);
             }
             catch (Exception)
             {
@@ -53,7 +53,6 @@ namespace Trabajo_Practico_Estructura_de_Datos
                     Lista.RecorrerPre(tvMostrar);
                     Lista.Recorrer(cbCodigoEliminado);
                     Lista.Recorrer(); 
-
                 }
                 else
                 {
@@ -67,7 +66,6 @@ namespace Trabajo_Practico_Estructura_de_Datos
             {
                 MessageBox.Show("No hay datos a eliminar", "Error"); 
             }
-           
         }
 
         private void optInOrden_CheckedChanged(object sender, EventArgs e)

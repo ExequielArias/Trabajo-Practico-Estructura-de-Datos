@@ -94,7 +94,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
         public void Recorrer()
         {
             clsNodo aux = Primero;
-            StreamWriter AD = new StreamWriter("Cola.csv", false, Encoding.UTF8);
+            StreamWriter AD = new StreamWriter("ListaSimple.csv", false, Encoding.UTF8);
             AD.WriteLine("Lista de espera\n");
             AD.WriteLine("codigo; nombre; tramite");
             while (aux != null)
