@@ -80,7 +80,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
         private clsNodo[] Vector = new clsNodo[100];
         private Int32 i = 0;
 
-        public void Equilibrar(Int32 codigo)
+        public void Equilibrar()
         {
             i = 0;
             GrabarVectorInOrden(Raiz);
@@ -128,6 +128,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 GrabarVectorInOrden(padre.izquierdo, codigo);
             }
         }
+
         public void Recorrer() 
         {
             clsNodo aux = Raiz;
@@ -137,6 +138,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
             InOrdenAsc(Raiz, AD); 
             AD.Close();
         }
+
         private void InOrdenAsc(clsNodo R, StreamWriter AD) 
         {
             if (R.izquierdo != null)
@@ -159,6 +161,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
             Lista.Items.Clear();
             InOrdenAsc(Lista, Raiz);
         }
+
         private void InOrdenAsc(ComboBox lst, clsNodo R)
         {
             if (R.izquierdo != null)
@@ -171,11 +174,13 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 InOrdenAsc(lst, R.derecho);
             }
         }
+
         public void Recorrer(ListBox Lista) 
         {
             Lista.Items.Clear();
             InOrdenAsc(Lista, Raiz); 
         }
+
         public void InOrdenAsc(ListBox Lst, clsNodo R) 
         {
             if (R.izquierdo != null)
@@ -195,16 +200,16 @@ namespace Trabajo_Practico_Estructura_de_Datos
             InOrdenAsc(Grilla, Raiz);
         }
 
-        private void InOrdenAsc(DataGridView Dgv, clsNodo R)
+        private void InOrdenAsc(DataGridView grilla, clsNodo R)
         {
             if (R.izquierdo != null)
             {
-                InOrdenAsc(Dgv, R.izquierdo);
+                InOrdenAsc(grilla, R.izquierdo);
             }
-            Dgv.Rows.Add(R.codigo, R.nombre, R.tramite);
+            grilla.Rows.Add(R.codigo, R.nombre, R.tramite);
             if (R.derecho != null)
             {
-                InOrdenAsc(Dgv, R.derecho);
+                InOrdenAsc(grilla, R.derecho);
             }
         }
 
@@ -220,6 +225,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 InOrdenAsc(lst, R.izquierdo);
             }
         }
+
         public void PreOrden(ComboBox lst, clsNodo R)
         {
             lst.Items.Add(R.codigo);
@@ -232,6 +238,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 PreOrden(lst, R.derecho);
             }
         }
+
         private void PreOrden(clsNodo R, DataGridView Grilla)
         {
             Grilla.Rows.Add(R.codigo, R.nombre, R.tramite);
@@ -244,6 +251,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 PreOrden(R.derecho, Grilla);
             }
         }
+
         private void PreOrden(clsNodo R, TreeNode nodoTreeView)
         {
             TreeNode Padre = new TreeNode(R.codigo.ToString());
@@ -257,6 +265,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 PreOrden(R.derecho, Padre);
             }
         }
+
         public void RecorrerPre(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
@@ -275,7 +284,33 @@ namespace Trabajo_Practico_Estructura_de_Datos
             }
             lst.Items.Add(R.codigo);
         }
-        public void RecorrerPre(TreeView tree)
+
+        public void RecorrerPost(ComboBox lst) 
+        {
+            lst.Items.Clear();
+            PostOrden(lst, Raiz); 
+        }
+
+        public void PostOrden(DataGridView grilla, clsNodo R)
+        {
+            if (R.izquierdo != null)
+            {
+                PostOrden(grilla, R.izquierdo);
+            }
+            if (R.derecho != null)
+            {
+                PostOrden(grilla, R.derecho);
+            }
+            grilla.Rows.Add(R.codigo, R.nombre, R.tramite); 
+        }
+
+        public void RecorrerPost(DataGridView Grilla) 
+        {
+            Grilla.Rows.Clear();
+            PostOrden(Grilla, Raiz); 
+        }
+
+        public void RecorrerTree(TreeView tree)
         {
             tree.Nodes.Clear();
             TreeNode Padre = new TreeNode("Arbol");
@@ -283,12 +318,13 @@ namespace Trabajo_Practico_Estructura_de_Datos
             PreOrden(Raiz, Padre);
             tree.ExpandAll();
         }
-       
+
         public void RecorrerDes(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
             InOrdenDes(Grilla, Raiz);
         }
+
         private void InOrdenDes(DataGridView Dgv, clsNodo R)
         {
             if (R.derecho != null)
@@ -307,6 +343,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
             Lista.Items.Clear();
             InOrdenDes(Lista, Raiz);
         }
+
         private void InOrdenDes(ComboBox lst, clsNodo R)
         {
             if (R.derecho != null)
@@ -319,10 +356,6 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 InOrdenAsc(lst, R.izquierdo);
             }
         }
-        
-       
-       
-        
-        
+
     }
 }

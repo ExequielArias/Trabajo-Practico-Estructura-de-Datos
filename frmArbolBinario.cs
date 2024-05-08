@@ -30,7 +30,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 Lista.Agregar(objNodo);
                 Lista.Recorrer(dgvGrillaArbolBinario);
                 Lista.Recorrer(cbCodigoEliminado);
-                Lista.RecorrerPre(tvMostrar);
+                Lista.RecorrerTree(tvMostrar);
                 Lista.Recorrer();
                 txtCodigo.Text = "";
                 txtNombre.Text = "";
@@ -50,9 +50,9 @@ namespace Trabajo_Practico_Estructura_de_Datos
                 if (Lista.Raiz != null)
                 {
                     Lista.Recorrer(dgvGrillaArbolBinario);
-                    Lista.RecorrerPre(tvMostrar);
+                    Lista.RecorrerTree(tvMostrar);
                     Lista.Recorrer(cbCodigoEliminado);
-                    Lista.Recorrer(); 
+                    Lista.Recorrer();
                 }
                 else
                 {
@@ -88,7 +88,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
             if (optPreOrden.Checked)
             {
                 Lista.RecorrerPre(dgvGrillaArbolBinario);
-                Lista.RecorrerPre(tvMostrar); 
+                Lista.RecorrerTree(tvMostrar); 
             }
         }
 
@@ -96,7 +96,8 @@ namespace Trabajo_Practico_Estructura_de_Datos
         {
             if (optPostOrden.Checked)
             {
-
+                Lista.RecorrerPost(dgvGrillaArbolBinario);
+                Lista.RecorrerPost(cbCodigoEliminado);  
             }
         }
 
@@ -107,7 +108,17 @@ namespace Trabajo_Practico_Estructura_de_Datos
 
         private void cmdEquilibrar_Click(object sender, EventArgs e)
         {
-            
+            if (Lista.Raiz == null)
+            {
+                MessageBox.Show("No hay ningun codigo ingresado");
+            }
+            else
+            {
+                Lista.Equilibrar();
+                Lista.Recorrer(dgvGrillaArbolBinario);
+                Lista.RecorrerTree(tvMostrar);
+                Lista.Recorrer(cbCodigoEliminado);
+            }
         }
     }
 }
