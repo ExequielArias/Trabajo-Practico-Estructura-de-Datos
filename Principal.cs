@@ -92,5 +92,11 @@ namespace Trabajo_Practico_Estructura_de_Datos
             frmArbolBinario Binario = new frmArbolBinario();    
             Binario.ShowDialog();   
         }
+
+        private void consultasEnLaBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaBaseDeDatos ConsultaBaseDeDatos = new frmConsultaBaseDeDatos();
+            ConsultaBaseDeDatos.ShowDialog();
+        }
     }
 }
