@@ -79,6 +79,7 @@
             this.Controls.Add(this.cmdListar);
             this.Controls.Add(this.txtOpRealizar);
             this.Controls.Add(this.lblConsultaEnSQL);
+            this.MaximizeBox = false;
             this.Name = "frmConsultaBaseDeDatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaBaseDeDatos";
