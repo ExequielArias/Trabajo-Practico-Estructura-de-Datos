@@ -98,5 +98,11 @@ namespace Trabajo_Practico_Estructura_de_Datos
             frmConsultaBaseDeDatos ConsultaBaseDeDatos = new frmConsultaBaseDeDatos();
             ConsultaBaseDeDatos.ShowDialog();
         }
+
+        private void operacionesConTablasDeBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDeDatos baseD = new frmBaseDeDatos();
+            baseD.ShowDialog(); 
+        }
     }
 }

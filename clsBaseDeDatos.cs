@@ -66,7 +66,7 @@ namespace Trabajo_Practico_Estructura_de_Datos
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(e.ToString());
                 conexion.Close();
             }
         }
