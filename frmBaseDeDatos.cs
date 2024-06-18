@@ -20,7 +20,9 @@ namespace Trabajo_Practico_Estructura_de_Datos
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            string varSQL = @"SELECT Libro.Titulo, Autor.Nombre FROM Libro
+                            INNER JOIN Autor ON Libro.IdAutor = Autor.IdAutor";
+            objBaseDatos.Listar(dgvMostrar, varSQL);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -61,7 +63,22 @@ namespace Trabajo_Practico_Estructura_de_Datos
 
         private void cmdInterseccion_Click(object sender, EventArgs e)
         {
+            string varSQL = @"SELECT * FROM Libro WHERE IdIdioma IN 
+                            (SELECT DISTINCT IdIdioma FROM Libro WHERE IdIdioma < 5)";
+            objBaseDatos.Listar(dgvMostrar, varSQL);
+        }
 
+        private void cmdSeleccionXConvul_Click(object sender, EventArgs e)
+        {
+            string varSQL = @"SELECT * FROM (SELECT * FROM Libro as T1 WHERE T1.IdIdioma > 5) as T2 WHERE T2.IdAutor > 10";
+            objBaseDatos.Listar(dgvMostrar, varSQL);
+        }
+
+        private void cmdDiferencia_Click(object sender, EventArgs e)
+        {
+            string varSQL = @"SELECT * FROM Libro WHERE IdIdioma NOT IN
+                    (SELECT DISTINCT IdIdioma FROM Libro WHERE IdIdioma < 5)";
+            objBaseDatos.Listar(dgvMostrar, varSQL);
         }
     }
 }

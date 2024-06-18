@@ -104,5 +104,11 @@ namespace Trabajo_Practico_Estructura_de_Datos
             frmBaseDeDatos baseD = new frmBaseDeDatos();
             baseD.ShowDialog(); 
         }
+
+        private void repasoDeOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRepasoOperaciones repaso = new frmRepasoOperaciones();
+            repaso.ShowDialog();
+        }
     }
 }
